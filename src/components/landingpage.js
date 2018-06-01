@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
-import Projects from './projects';
-import Project_Card from './project_card';
+import ProjectCard from './projectcard';
 
 class Landing extends Component {
   render() {
@@ -22,39 +21,16 @@ class Landing extends Component {
                   <a href="http://google.com" rel="noopener noreferrer" target="_blank">
                     <i className="fa fa-github-square" aria-hidden="true" />
                   </a>
-
-                  {/* Freecodecamp */}
-                  <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                    <i className="fa fa-free-code-camp" aria-hidden="true" />
-                  </a>
-
-                  {/* Youtube */}
-                  <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                    <i className="fa fa-youtube-square" aria-hidden="true" />
-                  </a>
                 </div>
             </div>
           </Cell>
           <Cell col={12}>
             <div className="projects-grid">
-              <Project_Card
-                title = "Sunset"
-                text_color = '#fff'
-                url="https://static.rootsrated.com/image/upload/s--dOztdKo4--/t_rr_large_traditional/xeeqiz2egntxuc7u5mce.jpg"
-                card_text="What a nice sunset"/>
-
-              <Project_Card
-                title = "Forest"
-                text_color = '#fff'
-                url="https://www.thewallpapers.org/photo/12142/Forrest-003.jpg"
-                card_text="What a nice forest"/>
-
-              <Project_Card
-                title = "Mountain"
-                text_color = '#fff'
-                url="https://www.atlasandboots.com/wp-content/uploads/2015/09/Non-technical-mountains-whitney.jpg"
-                card_text="What a nice mountain"/>
-
+              <ProjectCard
+                title = "Scale Generator"
+                text_color = '#000'
+                url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/scale_logo.jpg"
+                card_text="An application that is designed to randomly provide scales for practising musicians. This app is produced using Xamarin to proivde a cross platform application for iOS and Android."/>
             </div>
           </Cell>
         </Grid>

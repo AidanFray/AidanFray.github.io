@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
-import Main from './components/main';
+import { Layout, Navigation, Drawer, Content } from 'react-mdl';
+import LandingPage from './components/landingpage';
 import { Link } from 'react-router-dom';
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
           </Navigation>
         </Drawer>
         <Content>
-          <Main/>
+          <LandingPage/>
         </Content>
       </Layout>
     </div>
