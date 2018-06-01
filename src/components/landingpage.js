@@ -29,7 +29,7 @@ class Landing extends Component {
               <ProjectCard
                 title = "Scale Generator"
                 text_color = '#000'
-                url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/scale_logo.jpg"
+                url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/scale_logo.png"
                 card_text="An application that is designed to randomly provide scales for practising musicians. This app is produced using Xamarin to proivde a cross platform application for iOS and Android."/>
             </div>
           </Cell>
