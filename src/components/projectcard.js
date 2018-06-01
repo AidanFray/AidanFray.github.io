@@ -4,13 +4,9 @@ import {Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } f
 
 class ProjectCard extends Component {
   render() {
-    console.log('url: ' + this.props.url);
-    console.log('title: ' + this.props.title);
-    console.log('text_color: ' + this.props.text_color);
-    console.log('card_text: ' + this.props.card_text)
     return (
       <div className="project-item">
-        <Card shadow={2} style={{minWidth: '250px', margin: 'auto'}}>
+        <Card shadow={6} style={{minWidth: '250px', margin: 'auto'}}>
           <CardTitle style={{alignItems: 'flex-start', color: this.props.text_color, height: '200px', width: '330px', background: 'url('+ this.props.url +') center / cover'}}>
           <div className="card-title">
             {this.props.title}
@@ -22,10 +18,9 @@ class ProjectCard extends Component {
           </div>
         </CardText>
         <CardActions border>
-          <Button colored>GitHub</Button>
+          <Button colored href={this.props.github_url}>GitHub</Button>
         </CardActions>
         <CardMenu style={{color: this.props.text_color}}>
-          <IconButton name="share" />
         </CardMenu>
       </Card>
     </div>
