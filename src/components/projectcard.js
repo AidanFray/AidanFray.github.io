@@ -9,8 +9,8 @@ class ProjectCard extends Component {
     console.log('text_color: ' + this.props.text_color);
     console.log('card_text: ' + this.props.card_text)
     return (
-      <Card shadow={2} style={{minWidth: '450', margin: 'auto'}}>
-        <CardTitle style={{alignItems: 'flex-start', color: this.props.text_color, height: '200px', background: 'url('+ this.props.url +') center / cover'}}>
+      <Card shadow={2} style={{minWidth: '250px', margin: 'auto'}}>
+        <CardTitle style={{alignItems: 'flex-start', color: this.props.text_color, height: '200px', width: '330px', background: 'url('+ this.props.url +') center / cover'}}>
           <div className="card-title" style={{marginTop: '0'}}>
               {this.props.title}
           </div>
