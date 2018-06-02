@@ -5,7 +5,7 @@ class TypingElement extends Component {
 
   print_text(Text) {
     return(
-      <h2>{Text}</h2>
+      <h1 className="typing-text">{Text}</h1>
     )
   }
 
@@ -15,19 +15,21 @@ class TypingElement extends Component {
     let typing_backspace = 20;
 
     return(
-      <Typing loop="True">
-        {this.print_text("Python")}
-        <Typing.Delay ms={typing_delay} />
-        <Typing.Backspace count={typing_backspace} />
+      <div clasName="typing-text">
+        <Typing loop="True">
+          {this.print_text("Python")}
+          <Typing.Delay ms={typing_delay} />
+          <Typing.Backspace count={typing_backspace} />
 
-        {this.print_text("C++")}
-        <Typing.Delay ms={typing_delay} />
-        <Typing.Backspace count={typing_backspace} />
+          {this.print_text("C++")}
+          <Typing.Delay ms={typing_delay} />
+          <Typing.Backspace count={typing_backspace} />
 
-        {this.print_text("C#")}
-        <Typing.Delay ms={typing_delay} />
-        <Typing.Backspace count={typing_backspace} />
-      </Typing>
+          {this.print_text("C#")}
+          <Typing.Delay ms={typing_delay} />
+          <Typing.Backspace count={typing_backspace} />
+        </Typing>
+      </div>
     )
   }
 }
