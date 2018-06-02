@@ -48,6 +48,10 @@
   font-size: 40px;
 }
 
+.banner-text h2 {
+  font-size: 25px;
+}
+
 .banner-text hr {
   border-top: 5px dotted black;
   width: 100%;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import ProjectCard from './projectcard';
 import Calendar from './githubcalendar';
+import TypingElement from './typingelement'
 import Typing from 'react-typing-animation';
 
 class Landing extends Component {
@@ -12,14 +13,8 @@ class Landing extends Component {
         <Grid className="landing-grid">
           <Cell col={12}>
             <div className="banner-text">
-              <Typing>
-                <h1>Aidan Fray</h1>
-                <Typing.Delay ms={3000} />
-                <Typing.Backspace count={20} />
-                <h1> C# </h1>
-                <Typing.Delay ms={3000} />
-                <Typing.Backspace count={20} />
-              </Typing>
+              <h1>Aidan Fray </h1>
+              <TypingElement/>
               <div className="social-links">
                 {/* LinkedIn */}
                 <a href="http://google.com" rel="noopener noreferrer" target="_blank">
