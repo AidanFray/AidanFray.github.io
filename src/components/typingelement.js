@@ -3,7 +3,18 @@ import Typing from 'react-typing-animation';
 
 class TypingElement extends Component {
 
-  words = ["Python", ".NET", "Wireshark", "Arch Linux", "C++", "Java", "Kotlin"];
+  // New words to be placed here to be typed onto the screen
+  words =
+  [
+    //<Name>   <Color>
+    ["Python", ""],
+    [".NET", ""],
+    ["Wireshark", ""],
+    ["Arch Linux", ""],
+    ["C++", ""],
+    ["Java", ""],
+    ["Kotlin", ""]
+  ];
   typing_delay = 3000;
   typing_backspace = 20;
 
@@ -17,50 +28,35 @@ class TypingElement extends Component {
       this.words[i] = this.words[rnd];
       this.words[rnd] = tmp;
     }
-
+    console.log(this.words);
   }
 
-  print_text(text) {
+  print_text(text, color) {
     return(
-      <h1 className="typing-text">{text}</h1>
+      <h1 className="typing-text" style={{color: color}}>{text}</h1>
     )
   }
 
   render() {
+    var words_to_type = [];
+
+    // Dynamically creates the typing formatted code
+    for (var i = 0; i < this.words.length; i++) {
+      words_to_type.push(
+        <span>
+          {this.print_text(this.words[i][0], this.words[i][1])}
+          <Typing.Delay ms={this.typing_delay} />
+          <Typing.Backspace count={this.typing_backspace} />
+        </span>
+      )
+    }
+
     return(
       <div>
         {this.shuffle_list()}
 
-        {/*TODO: Way to do this dynamically - too much repeated code*/}
         <Typing loop={true}>
-          {this.print_text(this.words[0])}
-          <Typing.Delay ms={this.typing_delay} />
-          <Typing.Backspace count={this.typing_backspace} />
-
-          {this.print_text(this.words[1])}
-          <Typing.Delay ms={this.typing_delay} />
-          <Typing.Backspace count={this.typing_backspace} />
-
-          {this.print_text(this.words[2])}
-          <Typing.Delay ms={this.typing_delay} />
-          <Typing.Backspace count={this.typing_backspace} />
-
-          {this.print_text(this.words[3])}
-          <Typing.Delay ms={this.typing_delay} />
-          <Typing.Backspace count={this.typing_backspace} />
-
-          {this.print_text(this.words[4])}
-          <Typing.Delay ms={this.typing_delay} />
-          <Typing.Backspace count={this.typing_backspace} />
-
-          {this.print_text(this.words[5])}
-          <Typing.Delay ms={this.typing_delay} />
-          <Typing.Backspace count={this.typing_backspace} />
-
-          {this.print_text(this.words[6])}
-          <Typing.Delay ms={this.typing_delay} />
-          <Typing.Backspace count={this.typing_backspace} />
-
+            {words_to_type}
         </Typing>
       </div>)
     }
