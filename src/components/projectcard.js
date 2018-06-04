@@ -6,7 +6,7 @@ class ProjectCard extends Component {
   render() {
     return (
       <div className="project-item">
-        <Card shadow={6} style={{minWidth: '250px', margin: 'auto'}}>
+        <Card shadow={0} style={{minWidth: '250px', margin: 'auto'}}>
           <CardTitle style={{alignItems: 'flex-start', color: this.props.text_color, height: '200px', width: '330px', background: 'url('+ this.props.url +') center / cover'}}>
           <div className="card-title">
             {this.props.title}

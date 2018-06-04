@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 
 
-class Calendar extends Component {
+class GithubCalendar extends Component {
   render() {
     return(
-      <div class="calendar">
-        Loading the data just for you.
-        <script>
-          new GitHubCalendar(".calendar", "AidanFray");
-        </script>
+      <div>
+        <div id="github-widget" data-user="jcouyang" data-display="calendar"></div>
+        <script src="https://gh-widget.oyanglul.us/index.js"></script>
       </div>
     )
   }
 }
 
-export default Calendar;
+export default GithubCalendar;
