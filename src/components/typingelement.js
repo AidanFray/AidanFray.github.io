@@ -13,7 +13,7 @@ class TypingElement extends Component {
     ["Arch Linux", ""],
     ["C++", ""],
     ["Java", ""],
-    ["Kotlin", ""]
+    ["TeX", ""]
   ];
   typing_delay = 3000;
   typing_backspace = 20;

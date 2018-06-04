@@ -18,6 +18,14 @@ class Landing extends Component {
           <Cell col={12}>
             <div className="projects-grid">
               <ProjectCard
+                title = "Dissertation Project"
+                text_color = '#fff'
+                url="https://s15.postimg.cc/ghwy5traz/diss_proj.png"
+                card_text="Compromised and Degraded Network Simulation - The aim of the dissertation project was to create a custom simulated network that can demonstrate and visualise network degradation and common DoS attacks.
+                It uses the NetFilter section of the Linux Kernel to filter and minipulate network packets."
+                github_url="https://github.com/AidanFray/Dissertation-Project"/>
+
+              <ProjectCard
                 title = "Scale Generator"
                 text_color = '#000'
                 url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/scale_logo.png"
@@ -48,11 +56,10 @@ class Landing extends Component {
               <ProjectCard
                 title = "University Timetable Scraper"
                 text_color = '#fff'
-                url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/hull_logo"
+                url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/hull_logo.png"
                 card_text="Program that web scrapes the https://timetable.hull.ac.uk/ website to sync your timetable with outlook"
                 github_url="https://github.com/AidanFray/Hull_Timetable_To_Outlook"/>
 
-                />
             </div>
           </Cell>
           <Cell>
