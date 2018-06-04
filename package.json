@@ -2,7 +2,7 @@
   "name": "gh-pages-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aidanfray.github.io/gh-pages-portfolio/",
+  "homepage": "https://aidanfray.github.io/Portfolio/",
   "dependencies": {
     "@material/card": "^0.35.0",
     "react": "^16.4.0",
