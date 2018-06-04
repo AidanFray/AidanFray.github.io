@@ -12,7 +12,7 @@ class Landing extends Component {
       <div>
         <Grid className="landing-grid">
           <Cell col={12}>
-            <h1 className="title">#     #</h1>
+            <h1 className="title">Aidan Fray</h1>
             <TypingElement/>
           </Cell>
           <Cell col={12}>

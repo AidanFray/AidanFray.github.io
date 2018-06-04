@@ -28,7 +28,6 @@ class TypingElement extends Component {
       this.words[i] = this.words[rnd];
       this.words[rnd] = tmp;
     }
-    console.log(this.words);
   }
 
   print_text(text, color) {
@@ -38,6 +37,8 @@ class TypingElement extends Component {
   }
 
   render() {
+    this.shuffle_list();
+
     var words_to_type = [];
 
     // Dynamically creates the typing formatted code
@@ -53,8 +54,6 @@ class TypingElement extends Component {
 
     return(
       <div>
-        {this.shuffle_list()}
-
         <Typing loop={true}>
             {words_to_type}
         </Typing>
