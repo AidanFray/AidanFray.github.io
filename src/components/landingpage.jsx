@@ -15,7 +15,7 @@ class Landing extends Component {
             <TypingElement/>
           </Cell>
           <Cell col={12}>
-            <div className="projects-grid">
+            <div id="limit" className="projects-grid">
               <ProjectCard
                 title = "Dissertation Project"
                 text_color = '#fff'
