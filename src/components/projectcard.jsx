@@ -4,7 +4,6 @@ import {Card, CardTitle, CardText, CardActions, Button, CardMenu} from 'react-md
 
 class ProjectCard extends Component {
 
-
   languages =
   [
     ["C++", "devicon-cplusplus-plain"],
