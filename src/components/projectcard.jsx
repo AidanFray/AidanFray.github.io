@@ -23,14 +23,14 @@ class ProjectCard extends Component {
   languages_proc(text) {
     var sentence = text;
 
-    if (text != undefined) {
+    if (text !== undefined) {
       var parts = sentence.split(",");
 
       for (var i = 0; i < parts.length; i++) {
         var lang = parts[i];
 
         for (var x = 0; x < this.languages.length; x++) {
-          if (this.languages[x][0].trim() == lang) {
+          if (this.languages[x][0].trim() === lang) {
             this.langauges_logos.push(<i style={{fontSize: "25px", padding: "2px"}} class={this.languages[x][1]}></i>);
           }
         }
@@ -40,9 +40,7 @@ class ProjectCard extends Component {
     }
   }
 
-
   render() {
-    {this.languages_proc(this.props.languages)}
     return (
       <div className="project-item">
         <Card shadow={0} style={{minWidth: '250px', margin: 'auto'}}>

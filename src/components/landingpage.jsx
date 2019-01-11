@@ -3,7 +3,6 @@ import { Grid, Cell } from 'react-mdl';
 import ProjectCard from './projectcard';
 import GithubCalendar from './githubcalendar';
 import TypingElement from './typingelement'
-import Typing from 'react-typing-animation';
 
 class Landing extends Component {
 
