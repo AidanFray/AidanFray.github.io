@@ -4,6 +4,10 @@ import ProjectCard from './projectcard';
 import GithubCalendar from './githubcalendar';
 import TypingElement from './typingelement'
 
+///
+/// First page that the web app will arrive to
+///
+
 class Landing extends Component {
 
   render() {
@@ -21,7 +25,7 @@ class Landing extends Component {
                 text_color = '#fff'
                 url="https://s15.postimg.cc/ghwy5traz/diss_proj.png"
                 card_text="Compromised and Degraded Network Simulation - The aim of the dissertation project was to create a custom simulated network that can demonstrate and visualise network degradation and common DoS attacks.
-                It uses the NetFilter section of the Linux Kernel to filter and minipulate network packets."
+                It uses the NetFilter section of the Linux Kernel to filter and manipulate network packets."
                 languages="Python,Linux"
                 github_url="https://github.com/AidanFray/Dissertation-Project"/>
 
@@ -50,14 +54,6 @@ class Landing extends Component {
                 github_url="https://github.com/AidanFray/Interactive_Map"/>
 
               <ProjectCard
-                title = "Sliding Tiles"
-                text_color = '#000'
-                url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/mobile_logo.png"
-                card_text="Sliding puzzle coursework submitted for a university mobile devices module. The goal was to create a small sliding puzzle game with dynamically download puzzles."
-                languages="Java,Android"
-                github_url="https://github.com/AidanFray/Mobile_Devices_And_Applications"/>
-
-              <ProjectCard
                 title = "University Timetable Scraper"
                 text_color = '#fff'
                 url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/hull_logo.png"
@@ -65,6 +61,16 @@ class Landing extends Component {
                 languages="C#"
                 github_url="https://github.com/AidanFray/Hull_Timetable_To_Outlook"/>
 
+              <ProjectCard
+                  title = "Sliding Tiles"
+                  text_color = '#fff'
+                  url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/mobile_logo.png"
+                  card_text="Sliding puzzle coursework submitted for a university mobile devices module. The goal was to create a small sliding puzzle game with dynamically download puzzles."
+                  languages="Java,Android"
+                  github_url="https://github.com/AidanFray/Mobile_Devices_And_Applications"/>
+
+              {/* <ProjectCard visible = "hidden"/> */}
+              
             </div>
           </Cell>
           <Cell>

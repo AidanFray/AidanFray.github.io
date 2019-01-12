@@ -20,6 +20,8 @@ class ProjectCard extends Component {
 
   langauges_logos = []
 
+  // Creates a list of programming langauges dynamically that
+  // can be used to show what project tech was used
   languages_proc(text) {
     var sentence = text;
 
@@ -42,7 +44,7 @@ class ProjectCard extends Component {
     this.languages_proc(this.props.languages)
     return (
       <div className="project-item">
-        <Card shadow={0} style={{minWidth: '250px', height: '400px', margin: 'auto'}}>
+        <Card shadow={2} style={{minWidth: '250px', height: '400px', margin: 'auto', visibility: this.props.visible}}>
 
           <CardTitle style={{alignItems: 'flex-start', color: this.props.text_color, height: '200px', width: '330px', background: 'url('+ this.props.url +') center / cover'}}>
             <div className="card-title">
@@ -50,7 +52,7 @@ class ProjectCard extends Component {
             </div>
           </CardTitle>
 
-          <CardText id='centerXY' style={{height: '100px', overflow: 'auto'}}>
+          <CardText id="centerXY" style={{height: '100px', overflow: 'auto'}}>
             <div className="card-text">
               {this.props.card_text}
             </div>
