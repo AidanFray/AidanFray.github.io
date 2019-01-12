@@ -19,6 +19,8 @@ class Landing extends Component {
             <TypingElement/>
           </Cell>
           <Cell col={12}>
+            <GithubCalendar/>
+
             <div id="limit" className="projects-grid">
               <ProjectCard
                 title = "Dissertation Project"
@@ -72,9 +74,6 @@ class Landing extends Component {
               {/* <ProjectCard visible = "hidden"/> */}
               
             </div>
-          </Cell>
-          <Cell>
-            <GithubCalendar/>
           </Cell>
         </Grid>
       </div>
