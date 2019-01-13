@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import CalendarHeatmap from "react-calendar-heatmap";
-import "react-calendar-heatmap/dist/styles.css";
 import ReactTooltip from "react-tooltip";
 
+import "react-calendar-heatmap/dist/styles.css";
+import "../Themes.css";
 
-const availableThemes = [
-  "github",
-  "halloween",
-  "dracula"
-]
+const availableThemes = ["github", "halloween", "dracula"];
 
 const today = new Date();
 
@@ -46,17 +43,17 @@ class GithubCalendar extends Component {
   constructor(props) {
     super(props);
 
-    var currentTheme = availableThemes[0]
+    var currentTheme = availableThemes[2];
 
-    console.log(today.getDate())
+    console.log(today.getDate());
 
     // If it's halloween, the colour scheme changes
-    if (today.getMonth() + 1 == 10 && today.getDate() == 31) {
-      currentTheme = availableThemes[1]
+    if (today.getMonth() + 1 === 10 && today.getDate() === 31) {
+      currentTheme = availableThemes[1];
     }
 
     this.state = {
-      submissions: [{ date: formatDate(today), count: "4" }],
+      submissions: [],
       display: "",
       theme: currentTheme
     };
@@ -66,8 +63,8 @@ class GithubCalendar extends Component {
   // Sends a request to the API to request a JSON objects of contributions
   requestContributions() {
     var url = "https://github-contributions-api.now.sh/v1/AidanFray";
-    var r = fetch(url)
-      .then(r => r.text())
+    fetch(url)
+      .then(response => response.text())
       .then(t => this.createSubmissionList(JSON.parse(t)))
       .catch(error => {
         console.log("[Github Contributions API] " + error);
@@ -83,7 +80,7 @@ class GithubCalendar extends Component {
   createSubmissionList(list) {
     var c = list.contributions;
 
-    var s = [];
+    var submissionList = [];
 
     //Find today's date index
     var todayIndex = 0;
@@ -97,34 +94,51 @@ class GithubCalendar extends Component {
       }
     }
 
-    for (var i = 0; i < 365; i++) {
-      s.push({
-        date: c[todayIndex + i].date,
-        count: c[todayIndex + i].count
+    for (var x = 0; x < 365; x++) {
+      submissionList.push({
+        date: c[todayIndex + x].date,
+        count: c[todayIndex + x].count
       });
     }
 
     //Adds the submission list and displays the element
     this.setState({
-      submissions: s,
+      submissions: submissionList,
       display: ""
     });
+  }
+
+  changeTheme() {
+    var currentTheme = this.state.theme;
+    var newTheme = currentTheme;
+
+    while (currentTheme === newTheme) {
+      // Grabs a random index from the avaliableThemess
+      var i = Math.floor(Math.random() * availableThemes.length + 1) - 1;
+      newTheme = availableThemes[i]
+    }
+
+    this.setState({ theme: newTheme });
   }
 
   render() {
     return (
       <div
-        style={{ width: "75%", margin: "auto", display: this.state.display}}
+        className={`${this.state.theme}-background`}
+        style={{
+          width: "75%",
+          margin: "auto",
+          display: this.state.display,
+          padding: "25px",
+        }}
       >
         <CalendarHeatmap
-          showWeekdayLabels="true"
           startDate={yearAgo}
           endDate={today}
           values={this.state.submissions}
           classForValue={value => {
             var count = 0;
             if (value != null) {
-
               // Max value
               if (value.count > 4) {
                 count = 4;
@@ -146,6 +160,8 @@ class GithubCalendar extends Component {
             };
           }}
         />
+        <p />
+        <button onClick={() => this.changeTheme()}>Random Theme</button>
         <ReactTooltip />
       </div>
     );

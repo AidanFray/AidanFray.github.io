@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
 
 
+.test {
+  background: "#fff"
+}
 
 h1.title {
   font-weight: bolder;
@@ -29,7 +32,7 @@ h1.typing-text {
 }
 
 .landing-grid {
-  background: #E5E5E5;
+  background: #c5c5c5;
   text-align: center;
   margin: auto;
   top: 20px;
@@ -51,3 +54,4 @@ h1.typing-text {
   border-radius: 0px;
 
 }
+
