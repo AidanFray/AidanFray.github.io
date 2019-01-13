@@ -43,7 +43,8 @@ class GithubCalendar extends Component {
   constructor(props) {
     super(props);
 
-    var currentTheme = availableThemes[2];
+    // Default theme is the classic github
+    var currentTheme = availableThemes[0];
 
     console.log(today.getDate());
 
