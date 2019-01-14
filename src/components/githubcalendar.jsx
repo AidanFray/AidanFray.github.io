@@ -5,7 +5,15 @@ import ReactTooltip from "react-tooltip";
 import "react-calendar-heatmap/dist/styles.css";
 import "../Themes.css";
 
-const availableThemes = ["github", "halloween", "dracula"];
+const availableThemes = 
+[
+  "github", 
+  "halloween", 
+  "dracula",
+  "teal",
+  "YlGnBu",
+  "blue"
+];
 
 const today = new Date();
 
