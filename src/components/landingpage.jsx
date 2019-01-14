@@ -19,9 +19,9 @@ class Landing extends Component {
             <TypingElement/>
           </Cell>
           <Cell col={12}>
-            <GithubCalendar/>
-
             <div id="limit" className="projects-grid">
+              <GithubCalendar/>
+
               <ProjectCard
                 title = "Dissertation Project"
                 text_color = '#fff'
