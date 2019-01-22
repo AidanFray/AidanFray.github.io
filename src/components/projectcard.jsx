@@ -52,7 +52,10 @@ class ProjectCard extends Component {
             </div>
           </CardTitle>
 
-          <CardText id="centerXY" style={{height: '100px', overflow: 'auto'}}>
+          <CardText style={{
+              height: '100px', 
+              overflow: 'auto',
+              }}>
             <div className="card-text">
               {this.props.card_text}
             </div>

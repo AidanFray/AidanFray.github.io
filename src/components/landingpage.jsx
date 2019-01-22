@@ -32,6 +32,15 @@ class Landing extends Component {
                 github_url="https://github.com/AidanFray/Dissertation-Project"/>
 
               <ProjectCard
+                title = "Parcel"
+                text_color = '#a9653d'
+                url="https://i.postimg.cc/DypPNqtb/parcel-image.png"
+                card_text=" Python script used to simulate imperfect network conditions on a Linux OS.
+                The script utilises the NFQUEUE to degradation dynamically to packets."
+                languages="Python,Linux"
+                github_url="https://github.com/AidanFray/Parcel"/>
+
+              <ProjectCard
                 title = "Scale Generator"
                 text_color = '#000'
                 url="https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/scale_logo.png"
@@ -71,7 +80,9 @@ class Landing extends Component {
                   languages="Java,Android"
                   github_url="https://github.com/AidanFray/Mobile_Devices_And_Applications"/>
 
-              {/* <ProjectCard visible = "hidden"/> */}
+              <ProjectCard visible = "hidden"/>
+              <ProjectCard visible = "hidden"/>
+
               
             </div>
           </Cell>
