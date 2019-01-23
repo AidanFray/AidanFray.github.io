@@ -37,7 +37,7 @@ class Landing extends Component {
               <ProjectCard
                 title = "Parcel"
                 text_color = '#a9653d'
-                url="parcel_img.png"
+                url="parcel_image.png"
                 card_text=" Python script used to simulate imperfect network conditions on a Linux OS.
                 The script utilises the NFQUEUE to degradation dynamically to packets."
                 languages="Python,Linux"
