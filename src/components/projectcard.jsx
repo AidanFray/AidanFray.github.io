@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import {Card, CardTitle, CardText, CardActions, Button, CardMenu} from 'react-mdl';
 
-
 class ProjectCard extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      baseUrl: "https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/" + this.props.url 
+    };
+  }
+
+  // http://konpa.github.io/devicon/
   languages =
   [
     ["C++", "devicon-cplusplus-plain"],
@@ -15,7 +23,9 @@ class ProjectCard extends Component {
     ["Android", "devicon-android-plain"],
     ["Linux", "devicon-linux-plain"],
     ["iOS", "devicon-apple-original"],
-    ["Windows", "devicon-windows8-original"]
+    ["Windows", "devicon-windows8-original"],
+    ["Go", "devicon-go-plain"],
+    ["PHP", "devicon-php-plain"]
   ]
 
   langauges_logos = []
@@ -42,11 +52,19 @@ class ProjectCard extends Component {
 
   render() {
     this.languages_proc(this.props.languages)
-    return (
-      <div className="project-item">
-        <Card shadow={2} style={{minWidth: '250px', height: '400px', margin: 'auto', visibility: this.props.visible}}>
 
-          <CardTitle style={{alignItems: 'flex-start', color: this.props.text_color, height: '200px', width: '330px', background: 'url('+ this.props.url +') center / cover'}}>
+    return (
+
+      <div className="project-item">
+
+        <Card shadow={2} style={{minWidth: '250px', height: '400px', margin: 'auto', visibility: this.props.visible}}>
+       
+          <CardTitle  style={{alignItems: 'flex-start', 
+                            color: this.props.text_color, 
+                            height: '200px', 
+                            width: '330px', 
+                            background: 'url(' + this.state.baseUrl + ') center / cover'
+                          }}>
             <div className="card-title">
               {this.props.title}
             </div>
