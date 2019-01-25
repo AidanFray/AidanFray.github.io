@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Layout, Content, Header} from "react-mdl";
+import { Layout, Content} from "react-mdl";
 import LandingPage from "./components/landingpage";
 
 class App extends Component {
