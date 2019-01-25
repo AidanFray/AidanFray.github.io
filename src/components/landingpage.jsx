@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell, Button } from 'react-mdl';
 import ProjectCard from './projectcard';
 import GithubCalendar from './githubcalendar';
 import TypingElement from './typingelement'
@@ -39,7 +39,7 @@ class Landing extends Component {
                 text_color = '#a9653d'
                 url="parcel_image.png"
                 card_text=" Python script used to simulate imperfect network conditions on a Linux OS.
-                The script utilises the NFQUEUE to degradation dynamically to packets."
+                The script utilises the NFQUEUE to apply degradation dynamically to packets."
                 languages="Python,Linux"
                 github_url="https://github.com/AidanFray/Parcel"/>
 
@@ -49,7 +49,7 @@ class Landing extends Component {
                 url="square.png"
                 card_text="Online Jeopardy style CTF Hosted over the period of three days. 
                 Challenges included examples like:
-                Reverse engineering, cryptography and side channel attacks amongst others"
+                Reverse engineering, cryptography and side channel attacks."
                 languages="Python,Go,JS,PHP"
                 github_url="https://github.com/AidanFray/SquareCTF_2018"/>
 
@@ -65,9 +65,14 @@ class Landing extends Component {
                 title = "3D Graphics"
                 text_color = '#fff'
                 url="3d_sim.png"
-                card_text="A university graphics and simulation project where the aim was to simulate various numbers of spheres falling through a column."
+                card_text="A university graphics and simulation project where the aim was to simulate 
+                various numbers of spheres falling through a column."
                 languages="C#"
-                github_url="https://github.com/AidanFray/Simulation-and-3D-Graphics"/>
+                github_url="https://github.com/AidanFray/Simulation-and-3D-Graphics"
+                extra_links={
+                  <Button colored href="https://www.youtube.com/watch?v=yxUFEYLiOiI">YouTube</Button>
+                }
+                />
 
               <ProjectCard
                 title = "Interactive Map of Hull"
@@ -75,7 +80,11 @@ class Landing extends Component {
                 url="interactive_map.png"
                 card_text="A Javascript interactive map of Hull to celebrate the City of Culture."
                 languages="JS,HTML5"
-                github_url="https://github.com/AidanFray/Interactive_Map"/>
+                github_url="https://github.com/AidanFray/Interactive_Map"
+                extra_links={
+                  <Button colored href="https://aidanfray.github.io/Interactive_Map/">Website</Button>
+                }
+                />
 
               <ProjectCard
                 title = "University Timetable Scraper"
@@ -89,7 +98,8 @@ class Landing extends Component {
                   title = "Sliding Tiles"
                   text_color = '#fff'
                   url="mobile_logo.png"
-                  card_text="Sliding puzzle coursework submitted for a university mobile devices module. The goal was to create a small sliding puzzle game with dynamically download puzzles."
+                  card_text="Sliding puzzle coursework submitted for a university mobile devices module. The goal was to create a small 
+                  sliding puzzle game with dynamically downloaded puzzles."
                   languages="Java,Android"
                   github_url="https://github.com/AidanFray/Mobile_Devices_And_Applications"/>
 

@@ -85,6 +85,7 @@ class ProjectCard extends Component {
 
           <CardActions border style={{alignItems: 'flex-end'}}>
             <Button colored href={this.props.github_url}>GitHub</Button>
+            {this.props.extra_links}
           </CardActions>
 
           <CardMenu style={{color: this.props.text_color}}>
