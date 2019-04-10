@@ -3,6 +3,7 @@ import { Grid, Cell, Button } from "react-mdl";
 import ProjectCard from "./projectcard";
 import GithubCalendar from "./githubcalendar";
 import TypingElement from "./typingelement";
+import {Helmet} from "react-helmet";
 
 ///
 /// First page that the web app will arrive to
@@ -26,10 +27,15 @@ class Landing extends Component {
           </Cell>
 
           <Cell col={12}>
-            <img
-              src="https://www.hackthebox.eu/badge/image/75726"
-              alt="Hack The Box"
-            />
+            <Helmet>
+              <script async="true" src="https://www.hackthebox.eu/badge/75726"></script>
+              <script>
+          {`
+            console.log('Test', typeof $);
+          `}
+        </script>
+            </Helmet>
+           
           </Cell>
 
           <Cell col={12}>
@@ -55,14 +61,12 @@ class Landing extends Component {
               />
 
               <ProjectCard
-                title="Square CTF 2018"
+                title="CTF Writeups"
                 text_color="#000"
-                url="square.png"
-                card_text="Online Jeopardy style CTF Hosted over the period of three days. 
-                Challenges included examples like:
-                Reverse engineering, cryptography and side channel attacks."
+                url="ctf_time.png"
+                card_text="Personal write-ups for CTF competitions that I've competed in."
                 languages="Python,Go,JS,PHP"
-                github_url="https://github.com/AidanFray/SquareCTF_2018"
+                github_url="https://github.com/AidanFray/CTF_Writeups"
               />
 
               <ProjectCard
