@@ -62,11 +62,19 @@ class Landing extends Component {
 
               <ProjectCard
                 title="CTF Writeups"
-                text_color="#000"
+                text_color="#ff0435"
                 url="ctf_time.png"
-                card_text="Personal write-ups for CTF competitions that I've competed in."
+                card_text="Personal write-ups of CTF competitions that I've competed in. The repo also includes files required to complete the challenges."
                 languages="Python,Go,JS,PHP"
                 github_url="https://github.com/AidanFray/CTF_Writeups"
+                extra_links={
+                  <Button
+                    colored
+                    href="https://ctftime.org/team/68942"
+                  >
+                    Team
+                  </Button>
+                }
               />
 
               <ProjectCard
