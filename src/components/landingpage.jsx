@@ -3,7 +3,6 @@ import { Grid, Cell, Button } from "react-mdl";
 import ProjectCard from "./projectcard";
 import GithubCalendar from "./githubcalendar";
 import TypingElement from "./typingelement";
-import {Helmet} from "react-helmet";
 
 ///
 /// First page that the web app will arrive to
@@ -13,6 +12,7 @@ import {Helmet} from "react-helmet";
 /// https://postimages.org/
 
 class Landing extends Component {
+
   render() {
     return (
       <div>
@@ -24,18 +24,6 @@ class Landing extends Component {
 
           <Cell col={12}>
             <GithubCalendar />
-          </Cell>
-
-          <Cell col={12}>
-            <Helmet>
-              <script async="true" src="https://www.hackthebox.eu/badge/75726"></script>
-              <script>
-          {`
-            console.log('Test', typeof $);
-          `}
-        </script>
-            </Helmet>
-           
           </Cell>
 
           <Cell col={12}>
@@ -62,16 +50,13 @@ class Landing extends Component {
 
               <ProjectCard
                 title="CTF Writeups"
-                text_color="#ff0435"
+                text_color="#fff"
                 url="ctf_time.png"
                 card_text="Personal write-ups of CTF competitions that I've competed in. The repo also includes files required to complete the challenges."
                 languages="Python,Go,JS,PHP"
                 github_url="https://github.com/AidanFray/CTF_Writeups"
                 extra_links={
-                  <Button
-                    colored
-                    href="https://ctftime.org/team/68942"
-                  >
+                  <Button colored href="https://ctftime.org/team/68942">
                     Team
                   </Button>
                 }

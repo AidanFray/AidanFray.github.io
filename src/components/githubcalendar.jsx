@@ -135,7 +135,7 @@ class GithubCalendar extends Component {
       <div
         className={`${this.state.theme}-background`}
         style={{
-          width: "75%",
+          width: "60%",
           margin: "auto",
           display: this.state.display,
           padding: "25px",
