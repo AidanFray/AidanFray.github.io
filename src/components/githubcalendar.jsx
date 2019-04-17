@@ -54,8 +54,6 @@ class GithubCalendar extends Component {
     // Default theme is the classic github
     var currentTheme = availableThemes[0];
 
-    console.log(today.getDate());
-
     // If it's halloween, the colour scheme changes
     if (today.getMonth() + 1 === 10 && today.getDate() === 31) {
       currentTheme = availableThemes[1];

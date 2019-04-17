@@ -7,7 +7,8 @@ class ProjectCard extends Component {
     super(props);
 
     this.state = {
-      baseUrl: "https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/" + this.props.url 
+      baseUrl: "https://raw.githubusercontent.com/AidanFray/gh-pages-portfolio/master/src/project_images/" + this.props.url,
+      langauges_logos: []
     };
   }
 
@@ -28,11 +29,10 @@ class ProjectCard extends Component {
     ["PHP", "devicon-php-plain"]
   ]
 
-  langauges_logos = []
-
   // Creates a list of programming langauges dynamically that
   // can be used to show what project tech was used
   languages_proc(text) {
+    this.state.langauges_logos = []
     var sentence = text;
 
     if (text !== undefined) {
@@ -43,7 +43,7 @@ class ProjectCard extends Component {
 
         for (var x = 0; x < this.languages.length; x++) {
           if (this.languages[x][0].trim() === lang) {
-            this.langauges_logos.push(<i style={{fontSize: "25px", padding: "2px"}} class={this.languages[x][1]}></i>);
+            this.state.langauges_logos.push(<i style={{fontSize: "25px", padding: "2px"}} class={this.languages[x][1]}></i>);
           }
         }
       }
@@ -80,7 +80,7 @@ class ProjectCard extends Component {
           </CardText>
 
           <CardActions border>
-            {this.langauges_logos}
+            {this.state.langauges_logos}
           </CardActions>
 
           <CardActions border style={{alignItems: 'flex-end'}}>

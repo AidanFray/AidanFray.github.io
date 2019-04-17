@@ -52,3 +52,14 @@ h1.typing-text {
   border-radius: 0px;
 
 }
+
+#limit {
+  max-width: 1300px;
+  margin: auto;
+}
+
+#centerXY {
+display: flex;
+justify-content: center; 
+align-items: center; 
+}
