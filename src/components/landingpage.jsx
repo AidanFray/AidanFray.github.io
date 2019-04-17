@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Grid, Cell, Button } from "react-mdl";
 import ProjectCard from "./projectcard";
 import GithubCalendar from "./githubcalendar";
-import TypingElement from "./typingelement";
+//import TypingElement from "./typingelement";
 
 ///
 /// First page that the web app will arrive to
@@ -42,8 +42,9 @@ class Landing extends Component {
   }
 
   createProjectCards() {
-    this.state.cards_drawn = true
-    this.state.project_cards.push(
+    var cards = [];
+
+    cards.push(
       <ProjectCard
         title="Dissertation Project"
         text_color="#fff"
@@ -55,7 +56,7 @@ class Landing extends Component {
       />
     )
 
-    this.state.project_cards.push(
+    cards.push(
       <ProjectCard
         title="Parcel"
         text_color="#a9653d"
@@ -67,7 +68,7 @@ class Landing extends Component {
       />
     )
 
-    this.state.project_cards.push(
+    cards.push(
       <ProjectCard
         title="CTF Writeups"
         text_color="#fff"
@@ -83,7 +84,7 @@ class Landing extends Component {
       />
     )
 
-    this.state.project_cards.push(
+    cards.push(
       <ProjectCard
         title="Scale Generator"
         text_color="#000"
@@ -94,7 +95,7 @@ class Landing extends Component {
       />
     )
 
-    this.state.project_cards.push(
+    cards.push(
       <ProjectCard
         title="3D Graphics"
         text_color="#fff"
@@ -113,7 +114,7 @@ class Landing extends Component {
         }
       />
     )
-    this.state.project_cards.push(
+    cards.push(
       <ProjectCard
         title="Interactive Map of Hull"
         text_color="#c024fe"
@@ -132,7 +133,7 @@ class Landing extends Component {
       />
 
     )
-    this.state.project_cards.push(
+    cards.push(
       <ProjectCard
         title="University Timetable Scraper"
         text_color="#fff"
@@ -143,7 +144,7 @@ class Landing extends Component {
       />
 
     )
-    this.state.project_cards.push(
+    cards.push(
       <ProjectCard
         title="Sliding Tiles"
         text_color="#fff"
@@ -154,6 +155,10 @@ class Landing extends Component {
         github_url="https://github.com/AidanFray/Mobile_Devices_And_Applications"
       />
     )
+
+    //TODO: find a way not the change the state directly
+    // this.setState({project_cards: cards});
+    this.state.project_cards = cards;
   }
 
   // Method dynamically adds an invisible card to alter the spacing
@@ -174,7 +179,7 @@ class Landing extends Component {
     }
 
     //Makes sure this method doesn't run on the first render
-    if (width == 0) return;
+    if (width === 0) return;
 
     var cardColumns = Math.floor(width / cardWidth);
     var activeCards = this.state.project_cards.length;
@@ -183,7 +188,7 @@ class Landing extends Component {
 
     //Check to make sure remainder does not become NaN
     var remainder = 0
-    if (cardColumns != 0) {
+    if (cardColumns !== 0) {
       remainder = activeCards % cardColumns;
     }
 
@@ -196,16 +201,15 @@ class Landing extends Component {
       remainder = activeCards % cardColumns;
     }
 
+    //Adds all blank cards
     for (var i = 0; i < paddingCardsRequired; i++) {
       this.state.project_padding_cards.push(blankCard)
     }
-
-    console.log(this.state.project_padding_cards)
   }
 
   render() {
 
-    {this.addDynamicCardPadding()}
+    this.addDynamicCardPadding()
 
     return (
       <div>
