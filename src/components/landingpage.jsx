@@ -221,7 +221,9 @@ class Landing extends Component {
           </Cell>
 
           <Cell col={12}>
-            <GithubCalendar />
+            <div id="limit">
+              <GithubCalendar />
+            </div>
           </Cell>
 
           <Cell col={12}>
